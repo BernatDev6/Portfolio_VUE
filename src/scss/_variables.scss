@@ -1,0 +1,114 @@
+// _variables.scss
+
+// Colores
+$primary-color-light: #FCAA67;
+$secondary-color-light: #B0413E;
+$tertiary-color-light: #FFFFC7;
+$bg-color-light: #FFFFC7;
+$text-color-light: #333333;
+$accent-color-light: #e74c3c;
+
+$primary-color-dark: #2980b9;
+$secondary-color-dark: #27ae60;
+$bg-color-dark: #121212;
+$text-color-dark: #f0f0f0;
+$accent-color-dark: #c0392b;
+
+// Tipografía
+$font-family: 'Roboto', sans-serif;
+$base-font-size: 16px;
+$heading-font-size: 2rem;
+$subheading-font-size: 1.5rem;
+$text-font-size: 1rem;
+
+// Espaciado
+$base-spacing: 1rem;
+$small-spacing: 0.5rem;
+$large-spacing: 2rem;
+
+// Bordes y sombras
+$border-radius: 4px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+// Variables de modo
+:root {
+  --primary-color: #{$primary-color-light};
+  --secondary-color: #{$secondary-color-light};
+  --tertiary-color: #{$tertiary-color-light};
+  --bg-color: #{$bg-color-light};
+  --text-color: #{$text-color-light};
+  --accent-color: #{$accent-color-light};
+
+  --font-family: #{$font-family};
+  --base-font-size: #{$base-font-size};
+  --heading-font-size: #{$heading-font-size};
+  --subheading-font-size: #{$subheading-font-size};
+  --text-font-size: #{$text-font-size};
+
+  --base-spacing: #{$base-spacing};
+  --small-spacing: #{$small-spacing};
+  --large-spacing: #{$large-spacing};
+
+  --border-radius: #{$border-radius};
+  --box-shadow: #{$box-shadow};
+}
+
+[data-theme="dark"] {
+  --primary-color: #{$primary-color-dark};
+  --secondary-color: #{$secondary-color-dark};
+  --bg-color: #{$bg-color-dark};
+  --text-color: #{$text-color-dark};
+  --accent-color: #{$accent-color-dark};
+}
+
+// Estilos base
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+// Tipografía
+h1 {
+  font-size: var(--heading-font-size);
+  margin-bottom: var(--base-spacing);
+}
+
+h2 {
+  font-size: var(--subheading-font-size);
+  margin-bottom: var(--small-spacing);
+}
+
+p {
+  font-size: var(--text-font-size);
+  line-height: 1.6;
+}
+
+// Botones
+button {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: var(--small-spacing) var(--base-spacing);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+// Tarjetas
+.card {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--base-spacing);
+  margin-bottom: var(--large-spacing);
+}

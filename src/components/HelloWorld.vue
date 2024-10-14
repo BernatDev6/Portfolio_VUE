@@ -1,59 +1,85 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <section class="home">
+    <div class="hero">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I am a web developer passionate about creating stunning websites.</p>
+      <button @click="exploreProjects">Explore My Projects</button>
+    </div>
+
+    <div class="features">
+      <div class="card">
+        <h2>Responsive Design</h2>
+        <p>All my projects are mobile-friendly and look great on any device.</p>
+      </div>
+      <div class="card">
+        <h2>Modern Technologies</h2>
+        <p>I use the latest frameworks and libraries to build high-quality web applications.</p>
+      </div>
+      <div class="card">
+        <h2>Custom Animations</h2>
+        <p>I incorporate animations to make the user experience more engaging.</p>
+      </div>
+    </div>
+  </section>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+<script setup>
+const exploreProjects = () => {
+  console.log("Navigating to projects section...");
+  // Aquí podrías agregar la lógica para navegar a la sección de proyectos
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.home {
+  padding: var(--large-spacing);
+  text-align: center;
+
+  .hero {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: var(--large-spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--large-spacing);
+
+    h1 {
+      font-size: var(--heading-font-size);
+      margin-bottom: var(--base-spacing);
+    }
+
+    p {
+      font-size: var(--text-font-size);
+      margin-bottom: var(--base-spacing);
+    }
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--base-spacing);
+
+    .card {
+      padding: var(--base-spacing);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s;
+
+      h2 {
+        font-size: var(--subheading-font-size);
+        margin-bottom: var(--small-spacing);
+      }
+
+      p {
+        font-size: var(--text-font-size);
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
 }
 </style>

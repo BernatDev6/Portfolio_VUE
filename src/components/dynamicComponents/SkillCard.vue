@@ -1,8 +1,7 @@
 <template>
-    <div class="card">
-         <h3>{{ props.content.name }}</h3>
-         <p>Conocimiento: {{ props.content.knowledge }}</p>
-         <p>Conocimiento: {{ props.content.img }}</p>
+    <div class="skill-card">
+         <v-icon :name="props.content.icon" scale="6" :style="{color: props.content.iconColor}"/>
+         <p>{{ props.content.name }}</p>
     </div>
  </template>
  
@@ -14,15 +13,14 @@
  </script>
  
  <style scoped >
- .card {
+ .skill-card {
      background-color: var(--bg-primary-color);
-     color: var(--text-color);
-     border-radius: var(--border-radius);
-     padding: var(--base-spacing);
-     margin: 30px;
-     min-width: 250px;
-     display: flex;
-     flex-direction: column;
+     padding: var(--small-spacing);
+
+     p {
+        margin: 0;
+        color: var(--text-color);
+     }
  }
  
  </style>

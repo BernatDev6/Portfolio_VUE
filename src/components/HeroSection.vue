@@ -2,7 +2,7 @@
   <section class="hero d-flex flex-md-row flex-column align-items-center justify-content-evenly pt-5 pt-xl-0">
     <div class="hero-text d-flex flex-column align-items-md-start align-items-center justify-content-evenly">
       <div class="text-md-start">
-        <p class="pt-5 pt-lg-0">Hello!!!</p>
+        <p class="pt-4 pt-lg-0">Hello!!!</p>
         <h1>Me llamo <span>Bernat Font</span>.</h1>
         <p>I am a web developer passionate about creating stunning websites.</p>
       </div>

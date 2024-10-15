@@ -14,8 +14,9 @@
 <style scoped >
 .container{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap: var(--large-spacing);
 }
 </style>

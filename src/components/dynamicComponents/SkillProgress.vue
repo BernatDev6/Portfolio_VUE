@@ -1,10 +1,10 @@
 <template>
     <div class="list">
-        <p>{{ props.content.name }}</p>
+        <p :style="{color: props.content.iconColor}">{{ props.content.name }}</p>
         <div class="progress" role="progressbar" aria-label="Progress bar" :aria-valuenow="props.content.knowledge" aria-valuemin="0" aria-valuemax="100">
             <div
                 class="progress-bar progress-bar-striped progress-bar-animated"
-                :style="{ width: props.content.knowledge + '%', backgroundColor: 'var(--primary-color)'}"
+                :style="{ width: props.content.knowledge + '%', backgroundColor: props.content.iconColor}"
             >{{ props.content.knowledge+'%' }}</div>
         </div>
     </div>
@@ -22,8 +22,8 @@ const props = defineProps(['content']);
     background-color: var(--bg-primary-color);
     border-radius: var(--border-radius);
     width: 100%;
+    max-width: 500px;
     padding: var(--base-spacing);
-    margin: var(--base-spacing) 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

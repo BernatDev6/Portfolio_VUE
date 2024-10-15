@@ -7,13 +7,13 @@
           data-bs-target="#offcanvasExample"
           aria-controls="offcanvasExample"
         >
-          <v-icon name="co-hamburger-menu" scale="1.5"/>
+          <v-icon name="co-hamburger-menu" scale="1"/>
         </button>
         <div class="menu__logo">
           <router-link :to="{name: 'home'}">My Portfolio</router-link>
         </div>
         <button class="theme-toggle" @click="toggleTheme">
-            <v-icon name="io-invert-mode-sharp" scale="1.5"/>
+            <v-icon name="io-invert-mode-sharp" scale="1"/>
         </button>
     </div>
   
@@ -52,17 +52,21 @@
   </template>
   
   <script setup>
-    import { ref } from 'vue';
+    import { ref, onMounted } from 'vue';
   
-    const isDarkMode = ref(false);
+    const isDarkMode = ref(true);
     
     const toggleTheme = () => {
         isDarkMode.value = !isDarkMode.value;
         document.documentElement.setAttribute(
         'data-theme',
-        isDarkMode.value ? 'dark' : 'light'
+        isDarkMode.value ? 'ligt' : 'dark'
         );
     };
+
+    onMounted(() => {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    });
   </script>
   
   <style scoped lang="scss">
@@ -128,7 +132,7 @@
     backdrop-filter: blur(10px);
 
     &__logo a {
-      font-size: var(--subheading-font-size);
+      font-size: var(--text-font-size);
       color: var(--text-color);
       text-decoration: none;
       transition: color 0.3s;

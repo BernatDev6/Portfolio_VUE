@@ -17,7 +17,7 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue';
+  import { ref, onMounted } from 'vue';
   
   const isDarkMode = ref(false);
   
@@ -25,9 +25,13 @@
     isDarkMode.value = !isDarkMode.value;
     document.documentElement.setAttribute(
       'data-theme',
-      isDarkMode.value ? 'dark' : 'light'
+      isDarkMode.value ? 'light' : 'dark'
     );
   };
+
+  onMounted(() => {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  });
   </script>
   
   <style scoped lang="scss">

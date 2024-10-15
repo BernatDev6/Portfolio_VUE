@@ -4,10 +4,16 @@ import router from './router'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
-import { CoHamburgerMenu, IoInvertModeSharp, BiListUl, BiCardText, BiGraphUp } from "oh-vue-icons/icons"
+import { 
+    CoHamburgerMenu, IoInvertModeSharp, BiListUl, BiCardText, BiGraphUp,
+    FaHtml5, FaCss3Alt, FaJs, ViFileTypeVue, CoPhp, FaLaravel, SiMysql
+} from "oh-vue-icons/icons"
 
 
-addIcons(CoHamburgerMenu, IoInvertModeSharp, BiListUl, BiCardText, BiGraphUp)
+addIcons(
+    CoHamburgerMenu, IoInvertModeSharp, BiListUl, BiCardText, BiGraphUp,
+    FaHtml5, FaCss3Alt, FaJs, ViFileTypeVue, CoPhp, FaLaravel, SiMysql
+)
 
 const app = createApp(App)
 

@@ -1,18 +1,38 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeroSection />
+    <ProjectSection />
+    <div class="section-divider"></div>
+    <SkillsSection />
+    <div class="section-divider"></div>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+<script setup>
+import HeroSection from '@/components/HeroSection.vue'
+import ProjectSection from '@/components/ProjectSection.vue';
+import SkillsSection from '@/components/SkillsSection.vue';
+</script>
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+<style scoped lang="scss">
+.section-divider {
+  display: flex;
+  justify-content: center;
+  padding: var(--large-spacing) 0;
+  background-color: var(--bg-secondary-color);
+
+  &::before {
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,
+      var(--primary-color) 0,
+      var(--primary-color) 6px,
+      transparent 2px,
+      transparent 16px
+    );
   }
 }
-</script>
+
+</style>

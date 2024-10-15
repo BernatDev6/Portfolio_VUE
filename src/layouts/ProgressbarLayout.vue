@@ -1,0 +1,21 @@
+<template>
+   <div class="container">
+        <SkillProgress v-for="item in props.content" :key="item.id" :content="item" />
+   </div>
+</template>
+
+<script setup>
+    import { defineProps } from 'vue';
+    import SkillProgress from '@/components/dynamicComponents/SkillProgress.vue';
+
+    const props = defineProps(['content'])
+</script>
+
+<style scoped lang="scss">
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+</style>

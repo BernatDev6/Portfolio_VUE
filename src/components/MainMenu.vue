@@ -1,17 +1,19 @@
 <template>
-    <nav class="menu">
+  <div class="header">
+    <nav class="menu d-flex justify-content-between align-items-center">
       <div class="menu__logo">
         <router-link :to="{name: 'home'}">My Portfolio</router-link>
       </div>
-      <ul class="menu__links">
+      <ul class="menu__links d-flex align-items-center m-0">
         <li><router-link :to="{name: 'home'}">Home</router-link></li>
         <li><router-link :to="{name: 'home'}">Projects</router-link></li>
         <li><router-link :to="{name: 'home'}">Contact</router-link></li>
       </ul>
-      <button class="theme-toggle" @click="toggleTheme">
+      <button @click="toggleTheme">
         <v-icon name="io-invert-mode-sharp"/>
       </button>
     </nav>
+  </div>
   </template>
   
   <script setup>
@@ -30,51 +32,38 @@
   
   <style scoped lang="scss">
   .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    width: 100%;
     padding: var(--base-spacing);
-    background-color: var(--bg-color);
+    background-color: #00000021;
+    backdrop-filter: blur(10px);
+    
     color: var(--text-color);
-    box-shadow: var(--box-shadow);
   
     &__logo a {
-      font-size: var(--heading-font-size);
-      color: var(--primary-color);
+      font-size: var(--subheading-font-size);
+      color: var(--text-color);
       text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover{
+        color: var(--primary-color);
+      }
     }
   
     &__links {
       list-style: none;
-      display: flex;
       gap: var(--base-spacing);
   
       li a {
         text-decoration: none;
         color: var(--text-color);
         font-size: var(--text-font-size);
+        transition: color 0.3s;
   
         &:hover {
-          color: var(--accent-color);
+          color: var(--primary-color);
         }
-      }
-    }
-
-    span{
-      color: var(--text-color);
-    }
-  
-    .theme-toggle {
-      background-color: var(--primary-color);
-      color: var(--bg-color);
-      border: none;
-      padding: var(--small-spacing) var(--base-spacing);
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: var(--secondary-color);
       }
     }
   }

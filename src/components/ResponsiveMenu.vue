@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="menu d-flex justify-content-between align-items-center">
         <button
           class="show-button"
           type="button"
@@ -9,7 +9,9 @@
         >
           <v-icon name="co-hamburger-menu" scale="1.5"/>
         </button>
-        <span>Bernat Font</span>
+        <div class="menu__logo">
+          <router-link :to="{name: 'home'}">My Portfolio</router-link>
+        </div>
         <button class="theme-toggle" @click="toggleTheme">
             <v-icon name="io-invert-mode-sharp" scale="1.5"/>
         </button>
@@ -65,22 +67,27 @@
   
   <style scoped lang="scss">
   .offcanvas {
-    background-color: var(--bg-color);
+    background-color: var(--bg-primary-color);
     color: var(--text-color);
   
     .offcanvas-header {
-      background-color: var(--primary-color);
-      color: var(--bg-color);
+      background-color: var(--bg-primary-color);
+      color: var(--text-color);
       border-bottom: 1px solid var(--accent-color);
+
+      .btn-close {
+        box-shadow: none;
+        background-color: #ffffff00;
+        color: var(--primary-color);
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
   
       .title {
         font-size: var(--heading-font-size);
+        color: var(--primary-color);
         margin: 0;
-      }
-  
-      .btn-close {
-        background-color: var(--bg-color);
-        color: var(--text-color);
       }
     }
   
@@ -104,38 +111,32 @@
             transition: background-color 0.3s, color 0.3s;
   
             &:hover {
-              background-color: var(--accent-color);
-              color: var(--bg-color);
+              background-color: var(--bg-secondary-color);
+              color: var(--primary-color);
             }
           }
         }
       }
     }
   }
-
-  span{
-    color: var(--text-color);
-  }
   
-  .header{
-    padding: 12px;
-    background-color: var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    padding: var(--base-spacing);
+    background-color: #00000021;
+    backdrop-filter: blur(10px);
 
-  button {
-    padding: 4px;
-    display: flex;
-    justify-content: flex-start;
-    background-color: var(--primary-color);
-    color: var(--tertiary-color);
-    transition: background-color 0.3s, border-color 0.3s;
-  
-    &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
+    &__logo a {
+      font-size: var(--subheading-font-size);
+      color: var(--text-color);
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover{
+        color: var(--primary-color);
+      }
     }
   }
-  </style>
+</style>
   

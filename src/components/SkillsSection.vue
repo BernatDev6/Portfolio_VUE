@@ -1,5 +1,5 @@
 <template>
-    <section class="skills" >
+    <section id="skills" class="skills" >
         <h2>Skills</h2>
         <div class="layout-selector container pb-3">
             <button @click="handleLayout(ListLayout)" ><v-icon name="bi-list-ul" scale="1.3"/></button>
@@ -87,6 +87,7 @@
 <style scoped lang="scss">
     .skills {
         background-color: var(--bg-secondary-color);
+        padding: var(--large-spacing) 0;
 
         .layout-selector {
             text-align: center;

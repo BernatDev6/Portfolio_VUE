@@ -34,18 +34,11 @@
     </div>
     <div class="offcanvas-body">
       <ul class="list-unstyled list">
-        <li>
-          <router-link class="nav-link" :to="{ name: 'home' }">Home</router-link>
-        </li>
-        <li>
-          <router-link class="nav-link" :to="{ name: 'home' }">About</router-link>
-        </li>
-        <li>
-          <router-link class="nav-link" :to="{ name: 'home' }">Contact</router-link>
-        </li>
-        <li>
-          <router-link class="nav-link" :to="{ name: 'home' }">Bootstrap Comp</router-link>
-        </li>
+        <li><a class="nav-link" href="#home" @click.prevent="scrollToSection('home')">Home</a></li>
+        <li><a class="nav-link" href="#projects" @click.prevent="scrollToSection('projects')">Projects</a></li>
+        <li><a class="nav-link" href="#about" @click.prevent="scrollToSection('about')">About</a></li>
+        <li><a class="nav-link" href="#skills" @click.prevent="scrollToSection('skills')">Skills</a></li>
+        <li><a class="nav-link" href="#contact" @click.prevent="scrollToSection('contact')">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -53,6 +46,7 @@
   
 <script setup>
 import { ref, onMounted } from 'vue';
+import { Offcanvas } from 'bootstrap';
 
 const isDarkMode = ref(false);
 
@@ -67,6 +61,21 @@ const toggleTheme = () => {
 onMounted(() => {
   document.documentElement.setAttribute('data-theme', 'dark');
 });
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  const offset = 60;
+  if (section) {
+    const sectionPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
+
+    const offcanvasElement = document.getElementById('offcanvasExample');
+    const offcanvasInstance = Offcanvas.getInstance(offcanvasElement);
+    if (offcanvasInstance) {
+      offcanvasInstance.hide();
+    }
+  }
+}
 </script>
   
 <style scoped lang="scss">

@@ -5,10 +5,12 @@
     <div class="section-divider"></div>
     <SkillsSection />
     <div class="section-divider"></div>
+    <AboutSection />
   </div>
 </template>
 
 <script setup>
+import AboutSection from '@/components/AboutSection.vue';
 import HeroSection from '@/components/HeroSection.vue'
 import ProjectSection from '@/components/ProjectSection.vue';
 import SkillsSection from '@/components/SkillsSection.vue';

@@ -1,5 +1,5 @@
 <template>
-    <section class="projects d-flex flex-column align-items-center">
+    <section id="projects" class="projects d-flex flex-column align-items-center">
       <h2>My Projects</h2>
       <div class="project-list d-flex flex-wrap justify-content-center container">
         <div v-for="project in projects" :key="project.id" class="project-card">

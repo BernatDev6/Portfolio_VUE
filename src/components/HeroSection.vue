@@ -1,12 +1,46 @@
 <template>
-  <section class="hero d-flex flex-md-row flex-column align-items-center justify-content-evenly">
+  <section id="home" class="hero d-flex flex-md-row flex-column align-items-center justify-content-evenly">
     <div class="hero-text d-flex flex-column align-items-md-start align-items-center justify-content-evenly">
       <div class="text-md-start">
-        <p>Hello!!!</p>
+        <p>Hola!!!</p>
         <h1>Soy <span>Bernat Font</span>.</h1>
-        <p>I am a web developer passionate about creating stunning websites.</p>
+        <p>
+          I am a web developer passionate about creating stunning websites.
+          I am a web developer passionate about creating stunning websites.
+          I am a web developer passionate about creating stunning websites.
+        </p>
       </div>
       <button @click="exploreProjects" class="hero__button">Explore My Projects</button>
+      <div class="social-media">
+        <a 
+          href="https://www.linkedin.com/in/bernat-font-gin%C3%A9-07508924b/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-icon"
+          title="LinkedIn"
+        >
+          <v-icon name="bi-linkedin" scale="1.5"></v-icon>
+        </a>
+        <a 
+          href="https://github.com/bernatdev6" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-icon"
+          title="GitHub"
+        >
+          <v-icon name="bi-github" scale="1.5"></v-icon>
+        </a>
+        <a 
+          href="https://www.linkedin.com/in/bernat-font-gin%C3%A9-07508924b/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-icon"
+          @click="openWhatsApp"
+          title="WhatsApp"
+        >
+          <v-icon name="bi-whatsapp" scale="1.5"></v-icon>
+        </a>
+      </div>
     </div>
     <div class="hero-image-wrapper d-none d-sm-block">
       <div class="hero-image">
@@ -17,7 +51,17 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 
+const phoneNumber = ref('654636920'); 
+  
+  const defaultMessage = ref('Hola Bernat, '); // Personaliza este mensaje
+  
+  const openWhatsApp = () => {
+    const encodedMessage = encodeURIComponent(defaultMessage.value);
+    const whatsappLink = `https://wa.me/${phoneNumber.value}?text=${encodedMessage}`;
+    window.open(whatsappLink, '_blank');
+  };
 </script>
 
 <style scoped lang="scss">
@@ -44,6 +88,22 @@
     p {
       margin-bottom: var(--base-spacing);
     }
+
+    .social-media {
+      display: flex;
+      padding-top: var(--large-spacing);
+      gap: var(--small-spacing);
+
+      .social-icon {
+        color: var(--text-color);
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+
 
     &__button {
       &:hover{

@@ -5,9 +5,11 @@
         <router-link :to="{name: 'home'}">My Portfolio</router-link>
       </div>
       <ul class="menu__links d-flex align-items-center m-0">
-        <li><router-link :to="{name: 'home'}">Home</router-link></li>
-        <li><router-link :to="{name: 'home'}">Projects</router-link></li>
-        <li><router-link :to="{name: 'home'}">Contact</router-link></li>
+        <li><a href="#home" @click.prevent="scrollToSection('home')">Home</a></li>
+        <li><a href="#projects" @click.prevent="scrollToSection('projects')">Projects</a></li>
+        <li><a href="#about" @click.prevent="scrollToSection('about')">About</a></li>
+        <li><a href="#skills" @click.prevent="scrollToSection('skills')">Skills</a></li>
+        <li><a href="#contact" @click.prevent="scrollToSection('contact')">Contact</a></li>
       </ul>
       <button @click="toggleTheme">
         <v-icon name="io-invert-mode-sharp"/>
@@ -32,6 +34,16 @@
   onMounted(() => {
     document.documentElement.setAttribute('data-theme', 'dark');
   });
+
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    const offset = 60;
+    if (section) {
+      const sectionPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
+    }
+  }
+
   </script>
   
   <style scoped lang="scss">

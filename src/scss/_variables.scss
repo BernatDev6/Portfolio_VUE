@@ -1,16 +1,15 @@
 // _variables.scss
 
-// Colores
-$primary-color: #f87c58;
-$title-color: #db8873;
-
-
 // Colores modo claro
+$primary-color-light: #2ecc71;
+$title-color-light: #66e29a;
 $bg-primary-color-light: #eff9f8;
 $bg-secondary-color-light: #dbecf3;
 $text-color-light: #333333;
 
 // Colores para el modo oscuro
+$primary-color-dark: #f87c58;
+$title-color-dark: #db8873;
 $bg-primary-color-dark: #333647;
 $bg-secondary-color-dark: #282a39;
 $text-color-dark: #EAEAEA;
@@ -18,9 +17,10 @@ $text-color-dark: #EAEAEA;
 // Tipografía
 $font-family: 'Roboto', sans-serif;
 $base-font-size: 16px;
-$heading-font-size: 3rem;
-$subheading-font-size: 2rem;
-$text-font-size: 1rem;
+$heading-font-size: clamp(40px, 4vw, 100px);
+$subheading-font-size: clamp(30px, 2vw, 80px);
+$text-font-size: clamp(20px, 1.4vw, 28px);
+$small-text-font-size: clamp(16px, 1vw, 20px);
 
 // Espaciado
 $base-spacing: 1rem;
@@ -33,8 +33,8 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 // Variables de modo
 :root {
-  --primary-color: #{$primary-color};
-  --title-color: #{$title-color};
+  --primary-color: #{$primary-color-light};
+  --title-color: #{$title-color-light};
 
 
   --bg-primary-color: #{$bg-primary-color-light};
@@ -46,6 +46,7 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --heading-font-size: #{$heading-font-size};
   --subheading-font-size: #{$subheading-font-size};
   --text-font-size: #{$text-font-size};
+  --small-text-font-size: #{$small-text-font-size};
 
   --base-spacing: #{$base-spacing};
   --small-spacing: #{$small-spacing};
@@ -56,6 +57,8 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
+  --primary-color: #{$primary-color-dark};
+  --title-color: #{$title-color-dark};
   --bg-primary-color: #{$bg-primary-color-dark};
   --bg-secondary-color: #{$bg-secondary-color-dark};
   --text-color: #{$text-color-dark};
@@ -86,7 +89,6 @@ h2 {
 
 p {
   font-size: var(--text-font-size);
-  line-height: 1.6;
 }
 
 // Botones

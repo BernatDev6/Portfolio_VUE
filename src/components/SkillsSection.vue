@@ -1,7 +1,7 @@
 <template>
     <section class="skills" >
         <h2>Skills</h2>
-        <div class="layout-selector container">
+        <div class="layout-selector container pb-3">
             <button @click="handleLayout(ListLayout)" ><v-icon name="bi-list-ul" scale="1.3"/></button>
             <button @click="handleLayout(CardLayout)" ><v-icon name="bi-card-text" scale="1.3"/></button>
             <button @click="handleLayout(ProgressbarLayout)" ><v-icon name="bi-graph-up" scale="1.2"/></button>
@@ -41,34 +41,41 @@
         },
         {
             id: 3,
+            name: "Bootstrap",
+            icon: "fa-bootstrap",
+            iconColor: '#8711f9',
+            knowledge: 80,
+        },
+        {
+            id: 4,
             name: "JavaScript",
             icon: "fa-js",
             iconColor: '#f5d61e',
             knowledge: 60,
         },
         {
-            id: 4,
+            id: 5,
             name: "VUE",
             icon: "vi-file-type-vue",
             iconColor: '#3bb07c',
             knowledge: 70,
         },
         {
-            id: 5,
+            id: 6,
             name: "PHP",
             icon: "co-php",
             iconColor: '#6578b0',
             knowledge: 60,
         },
         {
-            id: 6,
+            id: 7,
             name: "Laravel",
             icon: "fa-laravel",
             iconColor: '#ee2b1f',
             knowledge: 50,
         },
         {
-            id: 7,
+            id: 8,
             name: "MySQL",
             icon: "si-mysql",
             iconColor: '#4d7a99',

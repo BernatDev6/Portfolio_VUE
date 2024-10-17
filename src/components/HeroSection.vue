@@ -1,15 +1,17 @@
 <template>
-  <section class="hero d-flex flex-md-row flex-column align-items-center justify-content-evenly pt-5 pt-xl-0">
+  <section class="hero d-flex flex-md-row flex-column align-items-center justify-content-evenly">
     <div class="hero-text d-flex flex-column align-items-md-start align-items-center justify-content-evenly">
       <div class="text-md-start">
-        <p class="pt-4 pt-lg-0">Hello!!!</p>
-        <h1>Me llamo <span>Bernat Font</span>.</h1>
+        <p>Hello!!!</p>
+        <h1>Soy <span>Bernat Font</span>.</h1>
         <p>I am a web developer passionate about creating stunning websites.</p>
       </div>
       <button @click="exploreProjects" class="hero__button">Explore My Projects</button>
     </div>
-    <div class="hero-image d-none d-sm-block">
-      <img src="@/assets/images/HeroImg.png" alt="">
+    <div class="hero-image-wrapper d-none d-sm-block">
+      <div class="hero-image">
+        <img src="@/assets/images/HeroImg.png" alt="">
+      </div>
     </div>
   </section>
 </template>
@@ -20,6 +22,7 @@
 
 <style scoped lang="scss">
 .hero {
+  padding-top: calc(var(--subheading-font-size) + (2*var(--base-spacing)));
   text-align: center;
   background-color: var(--bg-primary-color);
   box-shadow: var(--box-shadow);
@@ -39,7 +42,6 @@
     }
 
     p {
-      font-size: var(--subheading-font-size);
       margin-bottom: var(--base-spacing);
     }
 
@@ -51,13 +53,20 @@
     }
   }
 
-  .hero-image{
+  .hero-image-wrapper {
+    position: relative;
     padding: var(--large-spacing);
+    background-color: var(--bg-secondary-color);
+    clip-path: polygon(40% 15%, 90% 40%, 80% 80%, 20% 90%, 0% 40%);
+    z-index: 1;
+  }
 
+  .hero-image {
     img {
       max-width: 100%;
       height: auto;
       width: 40vh;
+      border-radius: 15px;
     }
   }
 }

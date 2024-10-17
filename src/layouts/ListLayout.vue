@@ -17,6 +17,6 @@
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: var(--large-spacing);
+    gap: var(--large-spacing) var(--small-spacing);
 }
 </style>

@@ -6,13 +6,15 @@ import 'bootstrap'
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
 import { 
     CoHamburgerMenu, IoInvertModeSharp, BiListUl, BiCardText, BiGraphUp,
-    FaHtml5, FaCss3Alt, FaJs, ViFileTypeVue, CoPhp, FaLaravel, SiMysql
+    FaHtml5, FaCss3Alt, FaJs, ViFileTypeVue, CoPhp, FaLaravel, SiMysql,
+    FaBootstrap,
 } from "oh-vue-icons/icons"
 
 
 addIcons(
     CoHamburgerMenu, IoInvertModeSharp, BiListUl, BiCardText, BiGraphUp,
-    FaHtml5, FaCss3Alt, FaJs, ViFileTypeVue, CoPhp, FaLaravel, SiMysql
+    FaHtml5, FaCss3Alt, FaJs, ViFileTypeVue, CoPhp, FaLaravel, SiMysql,
+    FaBootstrap,
 )
 
 const app = createApp(App)

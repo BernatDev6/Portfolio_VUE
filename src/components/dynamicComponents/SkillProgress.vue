@@ -1,11 +1,14 @@
 <template>
     <div class="list">
-        <p :style="{color: props.content.iconColor}">{{ props.content.name }}</p>
+        <div class="w-100 d-flex justify-content-between">
+            <p :style="{color: props.content.iconColor}">{{ props.content.name }}</p>
+            <p :style="{color: props.content.iconColor}">{{ props.content.knowledge+'%' }}</p>
+        </div>
         <div class="progress" role="progressbar" aria-label="Progress bar" :aria-valuenow="props.content.knowledge" aria-valuemin="0" aria-valuemax="100">
             <div
                 class="progress-bar progress-bar-striped progress-bar-animated"
                 :style="{ width: props.content.knowledge + '%', backgroundColor: props.content.iconColor}"
-            >{{ props.content.knowledge+'%' }}</div>
+            ></div>
         </div>
     </div>
 </template>
@@ -31,6 +34,7 @@ const props = defineProps(['content']);
 
 p {
     margin: 0;
+    font-size: var(--small-text-font-size)
 }
 
 .progress {

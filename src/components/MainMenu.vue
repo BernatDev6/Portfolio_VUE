@@ -40,9 +40,9 @@
     width: 100%;
     padding: var(--base-spacing);
     background-color: #00000021;
-    backdrop-filter: blur(10px);
-    
+    backdrop-filter: blur(10px); 
     color: var(--text-color);
+    z-index: 99;
   
     &__logo a {
       font-size: var(--subheading-font-size);
@@ -62,7 +62,7 @@
       li a {
         text-decoration: none;
         color: var(--text-color);
-        font-size: var(--text-font-size);
+        font-size: var(--small-text-font-size);
         transition: color 0.3s;
   
         &:hover {

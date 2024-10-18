@@ -1,7 +1,7 @@
 <template>
-    <section id="projects" class="projects d-flex flex-column align-items-center">
+  <section id="projects" class="projects">
       <h2>My Projects</h2>
-      <div class="project-list d-flex flex-wrap justify-content-center container">
+      <div class="container project-list d-flex flex-wrap justify-content-center">
         <div v-for="project in projects" :key="project.id" class="project-card">
           <img :src="project.img" :alt="project.title" class="project-image">
           <div class="project-info">
@@ -41,9 +41,8 @@
   <style scoped lang="scss">
   .projects {
     color: var(--text-color);
-    text-align: center;
     background-color: var(--bg-secondary-color);
-    padding: var(--large-spacing);
+    padding: var(--large-spacing) 0;
 
     .project-list {
       display: flex;

@@ -10,7 +10,7 @@
           I am a web developer passionate about creating stunning websites.
         </p>
       </div>
-      <button @click="exploreProjects" class="hero__button">Explore My Projects</button>
+      <button @click.prevent="scrollToSection('contact')" class="hero__button">Contacta with me</button>
       <div class="social-media">
         <a 
           href="https://www.linkedin.com/in/bernat-font-gin%C3%A9-07508924b/" 
@@ -62,6 +62,15 @@ const phoneNumber = ref('654636920');
     const whatsappLink = `https://wa.me/${phoneNumber.value}?text=${encodedMessage}`;
     window.open(whatsappLink, '_blank');
   };
+
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    const offset = 60;
+    if (section) {
+      const sectionPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
+    }
+  }
 </script>
 
 <style scoped lang="scss">

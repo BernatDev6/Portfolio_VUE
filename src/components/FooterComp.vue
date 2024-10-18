@@ -58,9 +58,8 @@ function scrollToSection(sectionId) {
   }
 }
 
-const svgWidth = ref('var(--heading-font-size)'); // Usar la variable CSS
+const svgWidth = ref('var(--heading-font-size)');
 
-// Computed para aplicar los estilos dinámicamente
 const svgStyle = computed(() => ({
   width: svgWidth.value,
 }));

@@ -109,7 +109,7 @@
             padding: var(--small-spacing);
             margin-bottom: var(--large-spacing);
             border-radius: var(--border-radius);
-            border: 1px solid var(--bg-secondary-color);
+            border: 1.5px solid var(--bg-secondary-color);
             font-size: var(--small-text-font-size);
             background-color: var(--bg-secondary-color);
             color: var(--text-color);

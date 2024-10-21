@@ -1,45 +1,39 @@
 <template>
-  <div class="home">
-    <HeroSection />
-    <ProjectSection />
-    <div class="section-divider"></div>
-    <AboutSection />
-    <div class="section-divider"></div>
-    <SkillsSection />
-    <div class="section-divider"></div>
-    <ContactSection />
-    <FooterComp />
-  </div>
+  <MainLayout>
+   <template #header>
+    <MainMenu v-if="isDesktop" />
+    <ResponsiveMenu v-else />
+   </template>
+  </MainLayout>
 </template>
 
 <script setup>
-import AboutSection from '@/components/AboutSection.vue';
-import ContactSection from '@/components/ContactSection.vue';
-import FooterComp from '@/components/FooterComp.vue';
-import HeroSection from '@/components/HeroSection.vue'
-import ProjectSection from '@/components/ProjectSection.vue';
-import SkillsSection from '@/components/SkillsSection.vue';
+  import { ref, onMounted, onUnmounted } from 'vue';
+
+  import MainLayout from '@/layouts/MainLayout.vue';
+  import MainMenu from '@/components/MainMenu.vue';
+  import ResponsiveMenu from '@/components/ResponsiveMenu.vue';
+
+
+  const isDesktop = ref(false);
+
+  // Function to update the screen size
+  const updateScreenSize = () => {
+    // Check for the Bootstrap 'md' breakpoint (768px)
+    isDesktop.value = window.innerWidth >= 768; // 'md' breakpoint
+  };
+
+  onMounted(() => {
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+  });
+
+  // Clean up the event listener when the component is unmounted
+  onUnmounted(() => {
+    window.removeEventListener('resize', updateScreenSize);
+  });
 </script>
 
-<style scoped lang="scss">
-.section-divider {
-  display: flex;
-  justify-content: center;
-  padding: var(--large-spacing) 0;
-  background-color: var(--bg-secondary-color);
-
-  &::before {
-    content: '';
-    width: 80%;
-    height: 2px;
-    background: repeating-linear-gradient(
-      to right,
-      var(--primary-color) 0,
-      var(--primary-color) 6px,
-      transparent 2px,
-      transparent 16px
-    );
-  }
-}
+<style scoped >
 
 </style>

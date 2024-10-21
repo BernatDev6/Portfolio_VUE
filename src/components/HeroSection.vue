@@ -11,7 +11,7 @@
         </p>
       </div>
       <button @click.prevent="scrollToSection('contact')" class="hero__button">Contacta with me</button>
-      <div class="social-media">
+      <div class="social-media gap-4 gap-md-2">
         <a 
           href="https://www.linkedin.com/in/bernat-font-gin%C3%A9-07508924b/" 
           target="_blank" 
@@ -101,7 +101,6 @@ const phoneNumber = ref('654636920');
     .social-media {
       display: flex;
       padding-top: var(--large-spacing);
-      gap: var(--small-spacing);
 
       .social-icon {
         color: var(--text-color);

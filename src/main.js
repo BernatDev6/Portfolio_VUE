@@ -7,14 +7,14 @@ import { OhVueIcon, addIcons } from 'oh-vue-icons'
 import { 
     CoHamburgerMenu, IoInvertModeSharp, BiListUl, BiCardText, BiGraphUp,
     FaHtml5, FaCss3Alt, FaJs, ViFileTypeVue, CoPhp, FaLaravel, SiMysql,
-    FaBootstrap, BiLinkedin, BiGithub, BiWhatsapp
+    FaBootstrap, BiLinkedin, BiGithub, BiWhatsapp, FaReact
 } from "oh-vue-icons/icons"
 
 
 addIcons(
     CoHamburgerMenu, IoInvertModeSharp, BiListUl, BiCardText, BiGraphUp,
     FaHtml5, FaCss3Alt, FaJs, ViFileTypeVue, CoPhp, FaLaravel, SiMysql,
-    FaBootstrap, BiLinkedin, BiGithub, BiWhatsapp
+    FaBootstrap, BiLinkedin, BiGithub, BiWhatsapp, FaReact
 )
 
 const app = createApp(App)

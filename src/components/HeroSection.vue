@@ -5,9 +5,9 @@
         <p>Hola!!!</p>
         <h1>Soy <span>Bernat Font</span>.</h1>
         <p>
-          I am a web developer passionate about creating stunning websites.
-          I am a web developer passionate about creating stunning websites.
-          I am a web developer passionate about creating stunning websites.
+          Desarrollador web apasionado por crear experiencias digitales intuitivas y visualmente atractivas. Me especializo en construir aplicaciones modernas, combinando diseño atractivo en el frontend y solidez funcional en el backend.
+          <br>
+          Explora mi portafolio y descubre cómo puedo ayudarte a dar vida a tu próximo proyecto.
         </p>
       </div>
       <button @click.prevent="scrollToSection('contact')" class="hero__button">Contacta with me</button>

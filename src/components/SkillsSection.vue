@@ -6,7 +6,7 @@
             <button @click="handleLayout(CardLayout)" ><v-icon name="bi-card-text" scale="1.3"/></button>
             <button @click="handleLayout(ProgressbarLayout)" ><v-icon name="bi-graph-up" scale="1.2"/></button>
         </div>
-        <Transition name="fade" mode="out-in">
+        <Transition class="content" name="fade" mode="out-in">
             <component :is="layout" :content="skills" />
         </Transition>
     </section>
@@ -62,20 +62,27 @@
         },
         {
             id: 6,
+            name: "React",
+            icon: "fa-react",
+            iconColor: '#5ed3f3',
+            knowledge: 40,
+        },
+        {
+            id: 7,
             name: "PHP",
             icon: "co-php",
             iconColor: '#6578b0',
             knowledge: 60,
         },
         {
-            id: 7,
+            id: 8,
             name: "Laravel",
             icon: "fa-laravel",
             iconColor: '#ee2b1f',
             knowledge: 50,
         },
         {
-            id: 8,
+            id: 9,
             name: "MySQL",
             icon: "si-mysql",
             iconColor: '#4d7a99',
@@ -87,7 +94,6 @@
 <style scoped lang="scss">
     .skills {
         background-color: var(--bg-secondary-color);
-        padding: var(--large-spacing) 0;
 
         .layout-selector {
             text-align: center;
@@ -97,6 +103,10 @@
                 box-shadow: none;
             }
         }
+    }
+
+    .content {
+      padding-bottom: var(--large-spacing);
     }
 
     .fade-enter-active, .fade-leave-active {

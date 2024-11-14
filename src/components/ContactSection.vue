@@ -2,13 +2,13 @@
     <section id="contact" class="contact-section">
         <h2>Contact</h2>
         <form ref="formRef" @submit.prevent="sendEmail" class="container contact-form">
-            <label>Name <span>*</span></label>
+            <label>Nombre <span>*</span></label>
             <input type="text" name="user_name" v-model="form.user_name" maxlength="40" />
-            <label>Surname</label>
+            <label>Apellidos</label>
             <input type="text" name="user_surname" v-model="form.user_surname" maxlength="40" />
             <label>Email <span>*</span></label>
             <input type="email" name="user_email" v-model="form.user_email" maxlength="100"/>
-            <label>Message <span>*</span></label>
+            <label>Mensaje <span>*</span></label>
             <textarea name="message" v-model="form.message" maxlength="500"></textarea>
             <button type="submit">Enviar</button>
             <p v-if="errorMessage" class="error">{{ errorMessage }}</p>

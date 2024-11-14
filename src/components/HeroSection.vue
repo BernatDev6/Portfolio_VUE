@@ -1,17 +1,17 @@
 <template>
-  <section id="home" class="hero d-flex flex-md-row flex-column align-items-center justify-content-evenly">
-    <div class="hero-text d-flex flex-column align-items-md-start align-items-center justify-content-evenly">
-      <div class="text-md-start">
+  <section id="home" class="hero d-flex flex-lg-row flex-column-reverse align-items-center justify-content-evenly">
+    <div class="hero-text d-flex flex-column align-items-lg-start align-items-center justify-content-evenly">
+      <div class="text-lg-start">
         <p>Hola!!!</p>
         <h1>Soy <span>Bernat Font</span>.</h1>
         <p>
-          Desarrollador web apasionado por crear experiencias digitales intuitivas y visualmente atractivas. Me especializo en construir aplicaciones modernas, combinando diseño atractivo en el frontend y solidez funcional en el backend.
+          Desarrollador web apasionado por crear experiencias digitales intuitivas y visualmente atractivas. Me especializo en construir aplicaciones modernas, combinando diseño en el frontend y solidez funcional en el backend.
           <br>
           Explora mi portafolio y descubre cómo puedo ayudarte a dar vida a tu próximo proyecto.
         </p>
       </div>
-      <button @click.prevent="scrollToSection('contact')" class="hero__button">Contacta with me</button>
-      <div class="social-media gap-4 gap-md-2">
+      <button @click.prevent="scrollToSection('contact')" class="hero__button my-3">Contactame</button>
+      <div class="social-media gap-4 gap-lg-3 mb-3">
         <a 
           href="https://www.linkedin.com/in/bernat-font-gin%C3%A9-07508924b/" 
           target="_blank" 
@@ -19,7 +19,7 @@
           class="social-icon"
           title="LinkedIn"
         >
-          <v-icon name="bi-linkedin" scale="1.5"></v-icon>
+          <v-icon name="bi-linkedin"></v-icon>
         </a>
         <a 
           href="https://github.com/bernatdev6" 
@@ -28,7 +28,7 @@
           class="social-icon"
           title="GitHub"
         >
-          <v-icon name="bi-github" scale="1.5"></v-icon>
+          <v-icon name="bi-github"></v-icon>
         </a>
         <a 
           href="https://www.linkedin.com/in/bernat-font-gin%C3%A9-07508924b/" 
@@ -38,14 +38,12 @@
           @click="openWhatsApp"
           title="WhatsApp"
         >
-          <v-icon name="bi-whatsapp" scale="1.5"></v-icon>
+          <v-icon name="bi-whatsapp"></v-icon>
         </a>
       </div>
     </div>
-    <div class="hero-image-wrapper d-none d-sm-block">
-      <div class="hero-image">
-        <img src="@/assets/images/HeroImg.png" alt="">
-      </div>
+    <div class="hero-image flex-shrink-0 m-4">
+        <img src="@/assets/images/HeroImg.avif" alt="">
     </div>
   </section>
 </template>
@@ -55,7 +53,7 @@ import { ref } from 'vue';
 
 const phoneNumber = ref('654636920'); 
   
-  const defaultMessage = ref('Hola Bernat, '); // Personaliza este mensaje
+  const defaultMessage = ref('Hola Bernat, ');
   
   const openWhatsApp = () => {
     const encodedMessage = encodeURIComponent(defaultMessage.value);
@@ -83,8 +81,7 @@ const phoneNumber = ref('654636920');
   .hero-text {
     color: var(--text-color);
     padding: var(--large-spacing);
-    max-width: 720px;
-    margin-bottom: var(--large-spacing);
+    max-width: 1200px;
 
     h1 {
       font-size: var(--heading-font-size);
@@ -121,21 +118,16 @@ const phoneNumber = ref('654636920');
     }
   }
 
-  .hero-image-wrapper {
-    position: relative;
-    padding: var(--large-spacing);
-    background-color: var(--bg-secondary-color);
-    clip-path: polygon(40% 15%, 90% 40%, 80% 80%, 20% 90%, 0% 40%);
-    z-index: 1;
-  }
-
   .hero-image {
+    background-color: var(--bg-secondary-color);
+    border-radius: 61% 39% 57% 43% / 66% 53% 47% 34%;
+    overflow: hidden;
+
     img {
-      max-width: 100%;
-      height: auto;
-      width: 40vh;
-      border-radius: 15px;
+      width: 100%;
+      height: 100%;
     }
   }
+
 }
 </style>

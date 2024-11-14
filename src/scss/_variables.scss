@@ -17,10 +17,11 @@ $text-color-dark: #EAEAEA;
 // Tipografía
 $font-family: 'Roboto', sans-serif;
 $base-font-size: 16px;
-$heading-font-size: clamp(40px, 4vw, 90px);
-$subheading-font-size: clamp(30px, 2vw, 60px);
-$text-font-size: clamp(18px, 1.4vw, 28px);
-$small-text-font-size: clamp(16px, 1vw, 20px);
+$heading-font-size: clamp(40px, 3vw, 100px);
+$subheading-font-size: clamp(30px, 2vw, 80px);
+$text-font-size: clamp(18px, 1.2vw, 48px);
+$small-text-font-size: clamp(16px, 1vw, 32px);
+$icon-size: clamp(24px, 1.4vw, 48px);
 
 // Espaciado
 $base-spacing: 1rem;
@@ -47,6 +48,7 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --subheading-font-size: #{$subheading-font-size};
   --text-font-size: #{$text-font-size};
   --small-text-font-size: #{$small-text-font-size};
+  --icon-size: #{$icon-size};
 
   --base-spacing: #{$base-spacing};
   --small-spacing: #{$small-spacing};
@@ -94,6 +96,7 @@ p {
 
 // Botones
 button {
+  font-size: var(--small-text-font-size);
   background-color: var(--primary-color);
   color: var(--text-color);
   padding: var(--small-spacing) var(--base-spacing);
@@ -107,6 +110,12 @@ button {
     background-color: var(--text-color);
     color: var(--primary-color);
   }
+}
+
+// Icon
+svg {
+  height: var(--icon-size);
+  width: auto;
 }
 
 // Logo

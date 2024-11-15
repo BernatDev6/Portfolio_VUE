@@ -21,7 +21,7 @@
   import FooterComp from '@/components/FooterComp.vue';
   import HeroSection from '@/components/HeroSection.vue'
   import ProjectSection from '@/components/ProjectSection.vue';
-  import SkillsSection from '@/components/SkillsSection.vue';
+  import SkillsSection from '@/components/DynamicComponents/SkillsSection.vue';
   </script>
   
   <style scoped lang="scss">

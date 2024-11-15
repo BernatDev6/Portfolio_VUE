@@ -2,10 +2,9 @@
   <section id="home" class="hero d-flex flex-lg-row flex-column-reverse align-items-center justify-content-evenly">
     <div class="hero-text d-flex flex-column align-items-lg-start align-items-center justify-content-evenly">
       <div class="text-lg-start">
-        <p>Hola!!!</p>
-        <h1>Soy <span>Bernat Font</span>.</h1>
+        <h1>Bernat Font</h1>
         <p>
-          Desarrollador web apasionado por crear experiencias digitales intuitivas y visualmente atractivas. Me especializo en construir aplicaciones modernas, combinando diseño en el frontend y solidez funcional en el backend.
+          Soy un desarrollador web apasionado por crear experiencias digitales intuitivas y visualmente atractivas. Me especializo en construir aplicaciones modernas, combinando diseño en el frontend y solidez funcional en el backend.
           <br>
           Explora mi portafolio y descubre cómo puedo ayudarte a dar vida a tu próximo proyecto.
         </p>
@@ -49,9 +48,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+  import { ref } from 'vue';
 
-const phoneNumber = ref('654636920'); 
+  const phoneNumber = ref('654636920'); 
   
   const defaultMessage = ref('Hola Bernat, ');
   
@@ -83,14 +82,6 @@ const phoneNumber = ref('654636920');
     padding: var(--large-spacing);
     max-width: 1200px;
 
-    h1 {
-      font-size: var(--heading-font-size);
-
-      span{
-        color: var(--primary-color);
-      }
-    }
-
     p {
       margin-bottom: var(--base-spacing);
     }
@@ -109,9 +100,8 @@ const phoneNumber = ref('654636920');
       }
     }
 
-
     &__button {
-      &:hover{
+      &:hover {
         background-color: var(--tertiary-color);
         color: var(--secondary-color);
       }
@@ -128,6 +118,5 @@ const phoneNumber = ref('654636920');
       height: 100%;
     }
   }
-
 }
 </style>

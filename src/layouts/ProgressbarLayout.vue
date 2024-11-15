@@ -6,7 +6,7 @@
 
 <script setup>
     import { defineProps } from 'vue';
-    import SkillProgress from '@/components/dynamicComponents/SkillProgress.vue';
+    import SkillProgress from '@/components/DynamicComponents/SkillProgress.vue';
 
     const props = defineProps(['content'])
 </script>

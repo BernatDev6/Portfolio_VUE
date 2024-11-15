@@ -15,7 +15,8 @@ $bg-secondary-color-dark: #282a39;
 $text-color-dark: #EAEAEA;
 
 // Tipografía
-$font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+$main-font: 'Sour Gummy', sans-serif;
 $base-font-size: 16px;
 $heading-font-size: clamp(40px, 3vw, 100px);
 $subheading-font-size: clamp(30px, 2vw, 80px);
@@ -42,7 +43,7 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --bg-secondary-color: #{$bg-secondary-color-light};
   --text-color: #{$text-color-light};
 
-  --font-family: #{$font-family};
+  --main-font: #{$main-font};
   --base-font-size: #{$base-font-size};
   --heading-font-size: #{$heading-font-size};
   --subheading-font-size: #{$subheading-font-size};
@@ -68,7 +69,8 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 // Estilos base
 body {
-  font-family: var(--font-family);
+  font-family: var(--main-font) !important;
+  font-weight: 200 !important;
   font-size: var(--base-font-size);
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -78,8 +80,9 @@ body {
 
 // Tipografía
 h1 {
-  font-size: var(--heading-font-size);
   margin-bottom: var(--base-spacing);
+  font-size: var(--heading-font-size);
+  color: var(--primary-color);
 }
 
 h2 {

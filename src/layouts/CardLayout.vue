@@ -6,7 +6,7 @@
  
  <script setup>
      import { defineProps } from 'vue';
-     import SkillCard from '@/components/dynamicComponents/SkillCard.vue';
+     import SkillCard from '@/components/DynamicComponents/SkillCard.vue';
  
      const props = defineProps(['content'])
  </script>

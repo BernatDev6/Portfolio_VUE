@@ -80,7 +80,7 @@
     }
     .contact-section{
         background-color: var(--bg-secondary-color);
-        padding: 0 var(--base-spacing) var(--large-spacing) var(--base-spacing);
+        padding: 0 var(--base-spacing) calc(var(--large-spacing)*2) var(--base-spacing);
     }
 
     .contact-form {

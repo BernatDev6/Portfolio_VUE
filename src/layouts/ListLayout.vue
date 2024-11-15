@@ -6,7 +6,7 @@
 
 <script setup>
     import { defineProps } from 'vue';
-    import SkillList from '@/components/dynamicComponents/SkillList.vue';
+    import SkillList from '@/components/DynamicComponents/SkillList.vue';
 
     const props = defineProps(['content'])
 </script>

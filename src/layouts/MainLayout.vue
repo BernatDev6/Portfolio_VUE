@@ -18,7 +18,7 @@
   <script setup>
   import AboutSection from '@/components/AboutSection.vue';
   import ContactSection from '@/components/ContactSection.vue';
-  import SkillsSection from '../components/DynamicComponents/SkillsSection.vue';
+  import SkillsSection from '@/components/DynamicComponents/SkillsSection.vue';
   import FooterComp from '@/components/FooterComp.vue';
   import HeroSection from '@/components/HeroSection.vue'
   import ProjectSection from '@/components/ProjectSection.vue';

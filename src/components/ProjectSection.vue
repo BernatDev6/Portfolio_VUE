@@ -21,19 +21,19 @@
   const projects = ref([
     {
       id: 1,
-      title: "Project One",
+      title: "Primer proyecto",
       description: "This is the first project, showcasing a cool feature.",
       img: "https://picsum.photos/id/6/300"
     },
     {
       id: 2,
-      title: "Project Two",
+      title: "Segundo proyecto",
       description: "This is the second project, demonstrating a unique design.",
       img: "https://picsum.photos/id/26/300"
     },
     {
       id: 3,
-      title: "Project Three",
+      title: "Tercer proyecto",
       description: "This is the third project, featuring a responsive layout.",
       img: "https://picsum.photos/id/36/300"
     }

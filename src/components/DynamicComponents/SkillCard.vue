@@ -25,7 +25,8 @@
      p {
         margin: 0;
         color: var(--text-color);
-        font-size: var(--small-text-font-size)
+        font-size: var(--small-text-font-size);
+        font-weight: var(--semi-normal-weight);
      }
  }
  

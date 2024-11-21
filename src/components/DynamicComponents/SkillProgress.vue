@@ -34,7 +34,8 @@ const props = defineProps(['content']);
 
 p {
     margin: 0;
-    font-size: var(--small-text-font-size)
+    font-size: var(--small-text-font-size);
+    font-weight: var(--semi-normal-weight);
 }
 
 .progress {

@@ -25,6 +25,7 @@
 
     p {
         margin: 0;
+        font-weight: var(--semi-normal-weight);
     }
  }
 

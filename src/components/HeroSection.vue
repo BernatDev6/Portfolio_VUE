@@ -1,7 +1,7 @@
 <template>
   <section id="home" class="hero d-flex flex-lg-row flex-column-reverse align-items-center justify-content-evenly">
     <div class="hero-text d-flex flex-column align-items-lg-start align-items-center justify-content-evenly">
-      <div class="text-lg-start">
+      <div class="text-start">
         <h1>Bernat Font</h1>
         <p>
           Soy un desarrollador web apasionado por crear experiencias digitales intuitivas y visualmente atractivas. Me especializo en construir aplicaciones modernas, combinando diseño en el frontend y solidez funcional en el backend.
@@ -17,6 +17,7 @@
           rel="noopener noreferrer" 
           class="social-icon"
           title="LinkedIn"
+          aria-label="LinkedIn de Bernat Font"
         >
           <v-icon name="bi-linkedin"></v-icon>
         </a>
@@ -26,6 +27,7 @@
           rel="noopener noreferrer" 
           class="social-icon"
           title="GitHub"
+          aria-label="GitHub de Bernat Font"
         >
           <v-icon name="bi-github"></v-icon>
         </a>
@@ -36,13 +38,14 @@
           class="social-icon"
           @click="openWhatsApp"
           title="WhatsApp"
+          aria-label="WhatsApp de Bernat Font"
         >
           <v-icon name="bi-whatsapp"></v-icon>
         </a>
       </div>
     </div>
     <div class="hero-image flex-shrink-0 m-4">
-        <img src="@/assets/images/HeroImg.avif" alt="">
+        <img src="@/assets/images/HeroImg.avif" alt="imagen de Bernat Font">
     </div>
   </section>
 </template>
@@ -112,10 +115,13 @@
     background-color: var(--bg-secondary-color);
     border-radius: 61% 39% 57% 43% / 66% 53% 47% 34%;
     overflow: hidden;
+    max-width: 600px;
+    aspect-ratio: 4 / 4;
 
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }

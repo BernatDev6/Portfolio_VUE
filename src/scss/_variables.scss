@@ -23,6 +23,7 @@ $subheading-font-size: clamp(30px, 2vw, 80px);
 $text-font-size: clamp(18px, 1.2vw, 48px);
 $small-text-font-size: clamp(16px, 1vw, 32px);
 $icon-size: clamp(24px, 1.4vw, 48px);
+$semi-normal-weight: 500;
 
 // Espaciado
 $base-spacing: 1rem;
@@ -50,6 +51,7 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --text-font-size: #{$text-font-size};
   --small-text-font-size: #{$small-text-font-size};
   --icon-size: #{$icon-size};
+  --semi-normal-weight: #{$semi-normal-weight};
 
   --base-spacing: #{$base-spacing};
   --small-spacing: #{$small-spacing};

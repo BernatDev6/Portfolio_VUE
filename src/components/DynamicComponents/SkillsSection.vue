@@ -2,9 +2,21 @@
     <section id="skills" class="skills" >
         <h2>Skills</h2>
         <div class="layout-selector container pb-3">
-            <button @click="handleLayout(ListLayout)" ><v-icon name="bi-list-ul" scale="1.3"/></button>
-            <button @click="handleLayout(CardLayout)" ><v-icon name="bi-card-text" scale="1.3"/></button>
-            <button @click="handleLayout(ProgressbarLayout)" ><v-icon name="bi-graph-up" scale="1.2"/></button>
+            <button 
+                @click="handleLayout(ListLayout)" 
+                aria-label="Cambia al diseño de lista">
+                <v-icon name="bi-list-ul" scale="1.3"/>
+            </button>
+            <button 
+                @click="handleLayout(CardLayout)" 
+                aria-label="Cambia al diseño de cartas">
+                <v-icon name="bi-card-text" scale="1.3"/>
+            </button>
+            <button 
+                @click="handleLayout(ProgressbarLayout)" 
+                aria-label="Cambia al diseño de barras progresivas">
+                <v-icon name="bi-graph-up" scale="1.2"/>
+            </button>
         </div>
         <Transition class="content" name="fade" mode="out-in">
             <component :is="layout" :content="skills" />

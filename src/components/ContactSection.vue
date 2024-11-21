@@ -2,17 +2,25 @@
     <section id="contact" class="contact-section">
         <h2>Contact</h2>
         <form ref="formRef" @submit.prevent="sendEmail" class="container contact-form">
-            <label>Nombre <span>*</span></label>
-            <input type="text" name="user_name" v-model="form.user_name" maxlength="40" />
-            <label>Apellidos</label>
-            <input type="text" name="user_surname" v-model="form.user_surname" maxlength="40" />
-            <label>Email <span>*</span></label>
-            <input type="email" name="user_email" v-model="form.user_email" maxlength="100"/>
-            <label>Mensaje <span>*</span></label>
-            <textarea name="message" v-model="form.message" maxlength="500"></textarea>
+            <label for="user_name">Nombre <span>*</span></label>
+            <input type="text" id="user_name" name="user_name" v-model="form.user_name" maxlength="40" />
+            
+            <label for="user_surname">Apellidos</label>
+            <input type="text" id="user_surname" name="user_surname" v-model="form.user_surname" maxlength="40" />
+            
+            <label for="user_email">Email <span>*</span></label>
+            <input type="email" id="user_email" name="user_email" v-model="form.user_email" maxlength="100" />
+            
+            <label for="message">Mensaje <span>*</span></label>
+            <textarea id="message" name="message" v-model="form.message" maxlength="500"></textarea>
+            
+            <p class="my-4"><span>*</span> Campos obligatorios.</p>
+
             <button type="submit">Enviar</button>
+            
             <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
         </form>
+
     </section>
   </template>
   
@@ -90,7 +98,7 @@
         box-shadow: var(--box-shadow);
         max-width: 500px;
         
-        label {
+        label, p {
             width: 100%;
             text-align: left;
             font-size: var(--text-font-size);
@@ -130,6 +138,7 @@
         textarea {
             min-height: 100px;
             resize: none;
+            margin-bottom: 0;
         }
     }
   </style>

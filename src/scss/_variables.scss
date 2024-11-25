@@ -14,6 +14,9 @@ $bg-primary-color-dark: #333647;
 $bg-secondary-color-dark: #282a39;
 $text-color-dark: #EAEAEA;
 
+// Colores de error
+$error-color: #ff6b6b;
+
 // Tipografía
 @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 $main-font: 'Sour Gummy', sans-serif;
@@ -38,8 +41,7 @@ $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 :root {
   --primary-color: #{$primary-color-light};
   --title-color: #{$title-color-light};
-
-
+  --error-color: #{$error-color};
   --bg-primary-color: #{$bg-primary-color-light};
   --bg-secondary-color: #{$bg-secondary-color-light};
   --text-color: #{$text-color-light};
@@ -78,6 +80,11 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
+}
+
+// Primary color class
+.primary-color {
+  color: var(--primary-color);
 }
 
 // Tipografía
@@ -127,4 +134,43 @@ svg {
 .logo {
   color: var(--text-color);
   padding: var(--small-spacing);
+}
+
+
+
+/* Estilo para el popup de swal2*/
+.swal2-popup {
+  font-family: var(--main-font);
+  background-color: var(--bg-primary-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del popup */
+.swal2-title {
+  font-size: var(--heading-font-size);
+  font-weight: bold;
+}
+
+/* Texto del contenido */
+.swal2-content {
+  font-size: var(--text-font-size);
+}
+
+/* Botón de confirmación */
+.swal2-confirm {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--small-spacing) var(--base-spacing);
+  font-size: var(--text-font-size);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swal2-confirm:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
 }

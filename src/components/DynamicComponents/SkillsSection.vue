@@ -1,5 +1,5 @@
 <template>
-    <section id="skills" class="skills" >
+    <section id="skills" class="skills">
         <h2>Skills</h2>
         <div class="layout-selector container pb-3">
             <button 
@@ -113,6 +113,10 @@
             button{
                 background: none;
                 box-shadow: none;
+
+                &:focus {
+                    color: var(--primary-color);
+                }
             }
         }
     }

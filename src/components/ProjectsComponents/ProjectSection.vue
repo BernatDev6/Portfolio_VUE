@@ -7,9 +7,9 @@
           :key="project.id" 
           :title="project.title" 
           :description="project.description" 
-          :img="project.img" 
+          :img="project.img"
+          :url="project.url"
         />
-
       </div>
     </section>
   </template>
@@ -23,19 +23,22 @@
       id: 1,
       title: "Primer proyecto",
       description: "This is the first project, showcasing a cool feature.",
-      img: "https://picsum.photos/id/6/300"
+      img: "https://picsum.photos/id/6/300",
+      url: "https://picsum.photos/id/6/300"
     },
     {
       id: 2,
       title: "Segundo proyecto",
       description: "This is the second project, demonstrating a unique design.",
-      img: "https://picsum.photos/id/26/300"
+      img: "https://picsum.photos/id/26/300",
+      url: "https://picsum.photos/id/26/300"
     },
     {
       id: 3,
       title: "Tercer proyecto",
       description: "This is the third project, featuring a responsive layout.",
-      img: "https://picsum.photos/id/36/300"
+      img: "https://picsum.photos/id/36/300",
+      url: "https://picsum.photos/id/36/300"
     }
   ]);
   </script>

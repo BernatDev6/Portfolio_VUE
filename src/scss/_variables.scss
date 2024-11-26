@@ -82,6 +82,12 @@ body {
   padding: 0;
 }
 
+/* Color de fondo cuando se selecciona el texto en la web */
+::selection {
+  background-color: var(--primary-color);
+}
+
+
 // Primary color class
 .primary-color {
   color: var(--primary-color);

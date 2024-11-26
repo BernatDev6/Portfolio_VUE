@@ -1,5 +1,5 @@
 <template>
-  <section id="home" class="hero d-flex flex-lg-row flex-column-reverse align-items-center justify-content-evenly">
+  <section id="home" class="hero d-flex flex-lg-row flex-column-reverse align-items-center justify-content-evenly px-xl-5">
     <div class="hero-text d-flex flex-column align-items-lg-start align-items-center justify-content-evenly">
       <div class="text-start">
         <h1>Bernat Font</h1>

@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class="hero-image flex-shrink-0 m-4">
-        <img src="@/assets/images/HeroImg.avif" alt="imagen de Bernat Font">
+        <img src="@/assets/images/HeroImg.avif" alt="imagen de Bernat Font" loading="lazy">
     </div>
   </section>
 </template>

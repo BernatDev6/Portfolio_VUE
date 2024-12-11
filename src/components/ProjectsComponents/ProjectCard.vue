@@ -56,15 +56,17 @@ defineProps(['title', 'description', 'img', 'url']);
         .image-wrapper {
             overflow: hidden;
             border-radius: var(--border-radius);
-            position: relative;
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         // .project-image styles
         .project-image {
-            object-fit: cover;
             width: 100%;
             height: 100%;
-            transform: scale(1);
             transition: transform 0.3s ease-in-out;
         }
 

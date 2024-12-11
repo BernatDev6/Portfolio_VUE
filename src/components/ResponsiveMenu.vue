@@ -1,11 +1,12 @@
 <template>
   <div class="menu d-flex justify-content-between align-items-center">
       <button
-        class="show-button"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasExample"
-        aria-controls="offcanvasExample"
+      data-bs-toggle="offcanvas" 
+      data-bs-target="#offcanvasExample" 
+      aria-controls="offcanvasExample" 
+      aria-label="Desplegar menu"
+      class="show-button" 
+      type="button"
       >
         <v-icon name="co-hamburger-menu" scale="1"/>
       </button>

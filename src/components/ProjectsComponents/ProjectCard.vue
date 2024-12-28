@@ -1,39 +1,44 @@
 <template>
     <a :href="url" class="project-card" target="_blank" rel="noopener noreferrer">
         <div>
-        <div class="image-wrapper">
-            <img :src="img" :alt="`Imagen de ${title}`" class="project-image">
-        </div>
-        <div class="project-info">
-            <router-link to="#">{{ title }}</router-link>
-            <p>{{ description }}</p>
-        </div>
+            <div class="image-wrapper">
+                <img :src="img" :alt="`Imagen de ${title}`" class="project-image" loading="lazy">
+            </div>
+            <div class="project-info">
+                <router-link to="#">{{ title }}</router-link>
+                <p>{{ description }}</p>
+            </div>
         </div>
         <div class="project-button">
-        <button class="visit-button">
-            Visitar
-            <div class="icon">
-            <svg
-                height="24"
-                width="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                fill="currentColor"
-                ></path>
-            </svg>
-            </div>
-        </button>
+            <button class="visit-button">
+                Visitar
+                <div class="icon">
+                <svg
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor"
+                    ></path>
+                </svg>
+                </div>
+            </button>
         </div>
     </a>
 </template>  
   
 <script setup>
 import { defineProps } from 'vue'
-defineProps(['title', 'description', 'img', 'url']);
+defineProps({
+    img: String,
+    url: String,
+    title: String,
+    description: String,
+})
 </script>
 
 <style scoped lang="scss">
@@ -91,13 +96,13 @@ defineProps(['title', 'description', 'img', 'url']);
             margin-top: var(--base-spacing);
 
             a {
-            color: var(--text-color);
-            font-size: var(--text-font-size);
-            margin-bottom: var(--small-spacing);
+                color: var(--text-color);
+                font-size: var(--text-font-size);
+                margin-bottom: var(--small-spacing);
             }
 
             p {
-            font-size: var(--small-text-font-size);
+                font-size: var(--small-text-font-size);
             }
         }
 

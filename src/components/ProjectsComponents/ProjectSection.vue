@@ -21,10 +21,10 @@
   const projects = ref([
     {
       id: 1,
-      title: "Primer proyecto",
-      description: "This is the first project, showcasing a cool feature.",
-      img: "https://picsum.photos/id/6/300",
-      url: "https://picsum.photos/id/6/300"
+      title: "React components",
+      description: "Explora una colección de componentes personalizables para React. Cada componente incluye ejemplos interactivos, código JSX y estilos CSS, diseñados para facilitar el desarrollo de tus aplicaciones web.",
+      img: require("@/assets/images/ReactComponentsImg.avif"),
+      url: "https://components-react-storage.vercel.app/"
     },
     {
       id: 2,

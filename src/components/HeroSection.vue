@@ -42,6 +42,7 @@
         >
           <v-icon name="bi-whatsapp"></v-icon>
         </a>
+        <DownloadCV />
       </div>
     </div>
     <div class="hero-image flex-shrink-0 m-4">
@@ -51,26 +52,27 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+import { ref } from 'vue';
+import DownloadCV from './buttons/DownloadCV.vue';
 
-  const phoneNumber = ref('654636920'); 
-  
-  const defaultMessage = ref('Hola Bernat, ');
-  
-  const openWhatsApp = () => {
-    const encodedMessage = encodeURIComponent(defaultMessage.value);
-    const whatsappLink = `https://wa.me/${phoneNumber.value}?text=${encodedMessage}`;
-    window.open(whatsappLink, '_blank');
-  };
+const phoneNumber = ref('654636920'); 
 
-  function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    const offset = 60;
-    if (section) {
-      const sectionPosition = section.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
-    }
+const defaultMessage = ref('Hola Bernat, ');
+
+const openWhatsApp = () => {
+  const encodedMessage = encodeURIComponent(defaultMessage.value);
+  const whatsappLink = `https://wa.me/${phoneNumber.value}?text=${encodedMessage}`;
+  window.open(whatsappLink, '_blank');
+};
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  const offset = 60;
+  if (section) {
+    const sectionPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
   }
+}
 </script>
 
 <style scoped lang="scss">
@@ -96,6 +98,7 @@
       .social-icon {
         color: var(--text-color);
         transition: color 0.3s;
+        cursor: pointer;
 
         &:hover {
           color: var(--primary-color);

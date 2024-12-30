@@ -45,12 +45,14 @@
         >
           <v-icon name="bi-whatsapp" scale="1.5"></v-icon>
         </a>
+        <DownloadCV />
       </div>
     </footer>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue';
+import DownloadCV from './buttons/DownloadCV.vue';
 
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
@@ -86,6 +88,7 @@ const svgStyle = computed(() => ({
 
       .social-icon {
         color: var(--text-color);
+        cursor: pointer;
       }
     }
 

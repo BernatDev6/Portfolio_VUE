@@ -21,29 +21,13 @@
         <li role="menuitem"><a href="#skills" @click.prevent="scrollToSection('skills')">Skills</a></li>
         <li role="menuitem"><a href="#contact" @click.prevent="scrollToSection('contact')">Contact</a></li>
       </ul>
-      <button @click="toggleTheme" aria-label="Alternar tema de la web">
-        <v-icon name="io-invert-mode-sharp"/>
-      </button>
+      <ThemModeButton />
     </nav>
   </div>
   </template>
   
   <script setup>
-  import { ref, onMounted } from 'vue';
-  
-  const isDarkMode = ref(false);
-  
-  const toggleTheme = () => {
-    isDarkMode.value = !isDarkMode.value;
-    document.documentElement.setAttribute(
-      'data-theme',
-      isDarkMode.value ? 'light' : 'dark'
-    );
-  };
-
-  onMounted(() => {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  });
+  import ThemModeButton from './buttons/ThemModeButton.vue';
 
   function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);

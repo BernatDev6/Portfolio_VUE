@@ -23,9 +23,7 @@
           </svg>
         </a>
       </div>
-      <button class="theme-toggle" @click="toggleTheme" aria-label="Alternar tema de la web">
-          <v-icon name="io-invert-mode-sharp" scale="1"/>
-      </button>
+      <ThemModeButton />
   </div>
 
   <div
@@ -56,22 +54,9 @@
 </template>
   
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, computed } from 'vue';
 import { Offcanvas } from 'bootstrap';
-
-const isDarkMode = ref(false);
-
-const toggleTheme = () => {
-  isDarkMode.value = !isDarkMode.value;
-  document.documentElement.setAttribute(
-    'data-theme',
-    isDarkMode.value ? 'light' : 'dark'
-  );
-};
-
-onMounted(() => {
-  document.documentElement.setAttribute('data-theme', 'dark');
-});
+import ThemModeButton from './buttons/ThemModeButton.vue';
 
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);

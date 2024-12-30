@@ -28,17 +28,17 @@
     },
     {
       id: 2,
-      title: "Segundo proyecto",
+      title: "Comming soon...",
       description: "This is the second project, demonstrating a unique design.",
       img: "https://picsum.photos/id/26/300",
-      url: "https://picsum.photos/id/26/300"
+      url: "#"
     },
     {
       id: 3,
-      title: "Tercer proyecto",
+      title: "Comming soon...",
       description: "This is the third project, featuring a responsive layout.",
       img: "https://picsum.photos/id/36/300",
-      url: "https://picsum.photos/id/36/300"
+      url: "#"
     }
   ]);
   </script>

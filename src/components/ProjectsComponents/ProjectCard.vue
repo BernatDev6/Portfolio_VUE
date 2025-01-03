@@ -1,35 +1,39 @@
 <template>
-    <a :href="url" class="project-card" target="_blank" rel="noopener noreferrer">
+    <div class="project-card">
         <div>
-            <div class="image-wrapper">
+            <!-- Enlace solo en la imagen -->
+            <a :href="url" target="_blank" rel="noopener noreferrer" class="image-wrapper">
                 <img :src="img" :alt="`Imagen de ${title}`" class="project-image" loading="lazy">
-            </div>
+            </a>
             <div class="project-info">
-                <router-link to="#">{{ title }}</router-link>
+                <p class="project-title">{{ title }}</p>
                 <p>{{ description }}</p>
             </div>
         </div>
         <div class="project-button">
-            <button class="visit-button">
+            <!-- Enlace solo en el botón -->
+            <a :href="url" target="_blank" rel="noopener noreferrer">
+                <button class="visit-button">
                 Visitar
                 <div class="icon">
-                <svg
+                    <svg
                     height="24"
                     width="24"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
-                >
+                    >
                     <path d="M0 0h24v24H0z" fill="none"></path>
                     <path
-                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                    fill="currentColor"
+                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                        fill="currentColor"
                     ></path>
-                </svg>
+                    </svg>
                 </div>
-            </button>
+                </button>
+            </a>
         </div>
-    </a>
-</template>  
+    </div>
+</template> 
   
 <script setup>
 import { defineProps } from 'vue'
@@ -49,7 +53,7 @@ defineProps({
         box-shadow: var(--box-shadow);
         text-align: left;
         cursor: pointer;
-        width: 300px;
+        max-width: 350px;
         color: var(--text-color);
         text-decoration: none;
         display: flex;
@@ -73,21 +77,8 @@ defineProps({
             width: 100%;
             height: 100%;
             transition: transform 0.3s ease-in-out;
-        }
-
-        &:hover {
-            .project-image {
-            transform: scale(1.2);
-            }
-
-            .visit-button {
-            .icon {
-                width: calc(100% - 0.45em);
-            }
-
-            .icon svg {
-                color: var(--primary-color);
-            }
+            &:hover {
+                transform: scale(1.2);
             }
         }
 
@@ -95,10 +86,11 @@ defineProps({
         .project-info {
             margin-top: var(--base-spacing);
 
-            a {
+            .project-title {
                 color: var(--text-color);
                 font-size: var(--text-font-size);
                 margin-bottom: var(--small-spacing);
+                text-decoration: underline;
             }
 
             p {
@@ -116,9 +108,15 @@ defineProps({
             }
 
             &:hover {
-            a {
-                color: var(--primary-color);
-            }
+                .visit-button {
+                    .icon {
+                        width: calc(100% - 0.45em);
+                    }
+
+                    .icon svg {
+                        color: var(--primary-color);
+                    }
+                }
             }
         }
     }

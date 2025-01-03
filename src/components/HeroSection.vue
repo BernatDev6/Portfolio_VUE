@@ -125,6 +125,13 @@ function scrollToSection(sectionId) {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform .3s ease;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
     }
   }
 }

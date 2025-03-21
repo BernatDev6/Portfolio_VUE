@@ -75,7 +75,7 @@ function scrollToSection(sectionId) {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .hero {
   padding-top: calc(var(--subheading-font-size) + (2*var(--base-spacing)));
   text-align: center;

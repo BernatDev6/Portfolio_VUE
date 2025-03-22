@@ -2,7 +2,7 @@
   <section id="home" class="hero d-flex flex-lg-row flex-column-reverse align-items-center justify-content-evenly px-xl-5">
     <div class="hero-text d-flex flex-column align-items-lg-start align-items-center justify-content-evenly">
       <div class="text-start">
-        <h1 class="primary-color">Bernat Font</h1>
+        <h1 class="h1-style">Bernat Font</h1>
         <p>
           Soy un desarrollador web apasionado por crear experiencias digitales intuitivas y visualmente atractivas. Me especializo en construir aplicaciones modernas, combinando diseño en el frontend y solidez funcional en el backend.
           <br>

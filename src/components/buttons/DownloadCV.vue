@@ -110,7 +110,7 @@
     padding: var(--small-spacing);
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: var(--base-text-font-size);
   }
   
   .close-btn:hover {

@@ -97,8 +97,7 @@ body {
 }
 
 // Tipografía
-h1 {
-  margin-bottom: var(--base-spacing);
+.h1-style {
   font-size: var(--heading-font-size);
   color: var(--primary-color);
 }
@@ -156,7 +155,7 @@ svg {
 
 /* Título del popup */
 .swal2-title {
-  font-size: var(--heading-font-size);
+  font-size: var(--subheading-font-size);
   font-weight: bold;
 }
 
@@ -171,8 +170,7 @@ svg {
   color: var(--text-color);
   border: none;
   border-radius: var(--border-radius);
-  padding: var(--small-spacing) var(--base-spacing);
-  font-size: var(--text-font-size);
+  font-size: var(--base-text-font-size);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

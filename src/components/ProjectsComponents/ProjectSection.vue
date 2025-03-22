@@ -28,10 +28,10 @@
     },
     {
       id: 2,
-      title: "Comming soon...",
-      description: "This is the second project, demonstrating a unique design.",
-      img: "https://picsum.photos/id/26/300",
-      url: "#"
+      title: "Mis Notas",
+      description: "Esta es una aplicación web donde los usuarios pueden registrarse, crear notas, gestionarlas y organizarlas según su estado. Además, cuenta con un perfil donde los ususrios pueden manejar diferentes ajusted personalizados.",
+      img: require("@/assets/images/MisNotasImg.avif"),
+      url: "https://github.com/BernatDev6/Todo_React_Laravel"
     },
     {
       id: 3,

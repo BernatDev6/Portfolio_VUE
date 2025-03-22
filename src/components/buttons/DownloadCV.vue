@@ -23,7 +23,7 @@
   
   // Controlar si mostrar el modal de vista previa
   const isPreviewVisible = ref(false);
-  const pdfUrl = ref("/files/My_CV.pdf");
+  const pdfUrl = ref("/files/Bernat_Font_CV.pdf");
   
   const confirmDownload = () => {
     Swal.fire({
@@ -61,7 +61,7 @@
   // Función para descargar el CV
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/files/My_CV.pdf";
+    link.href = "/files/Bernat_Font_CV.pdf";
     link.download = "Bernat_Font_CV.pdf";
     document.body.appendChild(link);
     link.click();
@@ -102,12 +102,12 @@
   /* Botón para cerrar el modal */
   .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     background-color: #f44336;
     color: white;
     border: none;
-    padding: 10px;
+    padding: var(--small-spacing);
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;

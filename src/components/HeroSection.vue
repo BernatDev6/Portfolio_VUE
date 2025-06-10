@@ -22,7 +22,7 @@
           <v-icon name="bi-linkedin"></v-icon>
         </a>
         <a 
-          href="https://github.com/bernatdev6" 
+          href="https://github.com/bernatdeveloper" 
           target="_blank" 
           rel="noopener noreferrer" 
           class="social-icon"

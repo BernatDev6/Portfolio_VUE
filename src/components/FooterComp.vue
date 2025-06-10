@@ -25,7 +25,7 @@
           <v-icon name="bi-linkedin" scale="1.5"></v-icon>
         </a>
         <a 
-          href="https://github.com/bernatdev6" 
+          href="https://github.com/bernatdeveloper" 
           target="_blank" 
           rel="noopener noreferrer" 
           class="social-icon"
